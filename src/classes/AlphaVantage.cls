@@ -8,11 +8,19 @@ public with sharing class AlphaVantage {
 
     static {
         AlphaVantageConfig__c[] configs = [SELECT baseurl__c, apikey__c
-                                             FROM AlphaVantageConfig__c];
+                                           FROM AlphaVantageConfig__c];
 
         if (configs.size() > 0) {
-            config = config[0];
+            config = configs[0];
         }
+    }
+
+    public static HttpResponse send(AVRequest req) {
+        if (req == null) {
+            throw new AVException('Invalid request');
+        }
+
+        return AlphaVantage.send(req.getFunction(), req.getParams());
     }
 
     public static HttpResponse send(Function func, Map<String, String> params) {
