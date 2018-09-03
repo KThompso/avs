@@ -26,4 +26,16 @@ public class AVGlobalEquities {
         return AV.send('TIME_SERIES_DAILY', params);
     }
 
+    public static HttpResponse timeSeriesDailyAdjusted(String symbol,
+        Map<String, String> params)
+    {
+        if (params == null) {
+            params = new Map<String, String>();
+        }
+
+        params.put('symbol', symbol);
+
+        return AV.send('TIME_SERIES_DAILY_ADJUSTED', params);
+    }
+
 }
