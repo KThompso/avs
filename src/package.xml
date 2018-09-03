@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>AlphaVantage</members>
+        <members>AV</members>
+        <members>AVGlobalEquities</members>
         <name>ApexClass</name>
     </types>
     <version>43.0</version>
