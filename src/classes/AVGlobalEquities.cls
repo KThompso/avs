@@ -50,4 +50,16 @@ public class AVGlobalEquities {
         return AV.send('TIME_SERIES_WEEKLY', params);
     }
 
+    public static HttpResponse timeSeriesWeeklyAdjusted(String symbol,
+        Map<String, String> params)
+    {
+        if (params == null) {
+            params = new Map<String, String>();
+        }
+
+        params.put('symbol', symbol);
+
+        return AV.send('TIME_SERIES_WEEKLY_ADJUSTED', params);
+    }
+
 }
