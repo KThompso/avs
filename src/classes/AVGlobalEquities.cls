@@ -47,7 +47,7 @@ public class AVGlobalEquities {
 
         params.put('symbol', symbol);
 
-        return AV.send('TIME_SERIES_WEEKLY_ADJUSTED', params);
+        return AV.send('TIME_SERIES_WEEKLY', params);
     }
 
 }
