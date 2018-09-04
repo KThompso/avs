@@ -3,6 +3,8 @@
     <types>
         <members>AV</members>
         <members>AVGlobalEquities</members>
+        <members>AVForex</members>
+        <members>AVCrypto</members>
         <name>ApexClass</name>
     </types>
     <version>43.0</version>
