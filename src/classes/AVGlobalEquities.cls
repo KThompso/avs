@@ -86,4 +86,16 @@ public class AVGlobalEquities {
         return AV.send('TIME_SERIES_MONTHLY_ADJUSTED', params);
     }
 
+    public static HttpResponse globalQuote(String symbol,
+        Map<String, String> params)
+    {
+        if (params == null) {
+            params = new Map<String, String>();
+        }
+
+        params.put('symbol', symbol);
+
+        return AV.send('GLOBAL_QUOTE', params);
+    }
+
 }
