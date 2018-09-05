@@ -1,7 +1,7 @@
 public class AVIndicators {
 
     private static HttpResponse getIndicator(String indicator, String symbol,
-        String interval, String seriesType, Map<String, String> params)
+        String interval, Map<String, String> params)
     {
         if (params == null) {
             params = new Map<String, String>();
@@ -9,9 +9,20 @@ public class AVIndicators {
 
         params.put('symbol', symbol);
         params.put('interval', interval);
-        params.put('series_type', seriesType);
 
         return AV.send(indicator, params);
+    }
+
+    private static HttpResponse getIndicator(String indicator, String symbol,
+        String interval, String seriesType, Map<String, String> params)
+    {
+        if (params == null) {
+            params = new Map<String, String>();
+        }
+
+        params.put('series_type', seriesType);
+
+        return getIndicator(indicator, symbol, interval, params);
     }
 
     private static HttpResponse getIndicator(String indicator, String symbol,
@@ -90,7 +101,7 @@ public class AVIndicators {
         return getIndicator('MAMA', symbol, interval, seriesType, params);
     }
 
-    //triple exponential moving average 
+    // Triple exponential moving average 
     public static HttpResponse t3(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
     {
@@ -110,6 +121,97 @@ public class AVIndicators {
         string seriesType, Map<String, String> params)
     {
         return getIndicator('MACDEXT', symbol, interval, seriesType, params);
+    }
+
+    // Stochastic oscillator
+    public static HttpResponse stoch(String symbol, String interval,
+        Map<String, String> params)
+    {
+        return getIndicator('STOCH', symbol, interval, params);
+    }
+
+    // Stochastic fast
+    public static HttpResponse stochf(String symbol, String interval,
+        Map<String, String> params)
+    {
+        return getIndicator('STOCHF', symbol, interval, params);
+    }
+
+    // Relative strength index
+    public static HttpResponse rsi(String symbol, String interval,
+        String timePeriod, string seriesType, Map<String, String> params)
+    {
+        return getIndicator('RSI', symbol, interval, timePeriod, seriesType,
+            params);
+    }
+
+    // Stochastic relative strength index
+    public static HttpResponse stochrsi(String symbol, String interval,
+        String timePeriod, string seriesType, Map<String, String> params)
+    {
+        return getIndicator('STOCHRSI', symbol, interval, timePeriod,
+            seriesType, params);
+    }
+
+    // Williams' %R
+    public static HttpResponse willr(String symbol, String interval,
+        String timePeriod, Map<String, String> params)
+    {
+        if (params == null) {
+            params = new Map<String, String>();
+        }
+
+        params.put('time_period', timePeriod);
+
+        return getIndicator('WILLR', symbol, interval, params);
+    }
+
+    // Average directional movement index
+    public static HttpResponse adx(String symbol, String interval,
+        String timePeriod, Map<String, String> params)
+    {
+        if (params == null) {
+            params = new Map<String, String>();
+        }
+
+        params.put('time_period', timePeriod);
+
+        return getIndicator('ADX', symbol, interval, params);
+    }
+
+    // Average directional movement index rating
+    public static HttpResponse adxr(String symbol, String interval,
+        String timePeriod, Map<String, String> params)
+    {
+        if (params == null) {
+            params = new Map<String, String>();
+        }
+
+        params.put('time_period', timePeriod);
+
+        return getIndicator('ADXR', symbol, interval, params);
+    }
+
+    // Absolute price oscillator
+    public static HttpResponse apo(String symbol, String interval,
+        string seriesType, Map<String, String> params)
+    {
+        return getIndicator('APO', symbol, interval, seriesType, params);
+    }
+
+    // Percentage price oscillator
+    public static HttpResponse ppo(String symbol, String interval,
+        string seriesType, Map<String, String> params)
+    {
+        return getIndicator('PPO', symbol, interval, seriesType, params);
+    }
+
+    // Momentum
+    public static HttpResponse mom(String symbol, String interval,
+        String timePeriod, String seriesType, Map<String, String> params)
+    {
+        return getIndicator('MOM', symbol, interval, timePeriod, seriesType,
+               params);
     }
 
 }
