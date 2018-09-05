@@ -8,6 +8,10 @@ public with sharing class AV {
         String endpoint = baseurl + '/query?function=' + function
             + '&apikey=' + apikey;
 
+        if (params == null) {
+            params = new Map<String, String>();
+        }
+
         for (String key : params.keySet()) {
             endpoint += '&' + key + '=' + params.get(key);
         }
