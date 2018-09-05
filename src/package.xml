@@ -6,6 +6,7 @@
         <members>AVForex</members>
         <members>AVGlobalEquities</members>
         <members>AVIndicators</members>
+        <members>AVSector</members>
         <name>ApexClass</name>
     </types>
     <version>43.0</version>
