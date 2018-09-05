@@ -9,7 +9,7 @@
                     keys: build-tools
                 - run:
                     name: Install build tools
-                    command: bash ./install-build-tools.sh
+                    command: bash ./bin/install-build-tools.sh
                 - run:
                     name: Login to test org
                     command: build_tools/force login -i $SFDC_HOST -u $SFDC_USERNAME -p "$SFDC_PASSWORD$SFDC_SECURITY_TOKEN"
