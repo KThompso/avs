@@ -4,4 +4,8 @@ public class AVSector {
         return AV.send('SECTOR', params);
     }
 
+    public static HttpResponse sector() {
+        return AV.send('SECTOR', null);
+    }
+
 }
