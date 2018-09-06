@@ -10,6 +10,7 @@
         <members>AVIndicators</members>
         <members>AVMockResponseGenerator</members>
         <members>AVSector</members>
+        <members>AVSector_Test</members>
         <members>AV_Test</members>
         <name>ApexClass</name>
     </types>
