@@ -3,6 +3,7 @@
     <types>
         <members>AV</members>
         <members>AVCrypto</members>
+        <members>AVCrypto_Test</members>
         <members>AVForex</members>
         <members>AVGlobalEquities</members>
         <members>AVIndicators</members>
