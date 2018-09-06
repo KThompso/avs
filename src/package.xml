@@ -6,7 +6,9 @@
         <members>AVForex</members>
         <members>AVGlobalEquities</members>
         <members>AVIndicators</members>
+        <members>AVMockResponseGenerator</members>
         <members>AVSector</members>
+        <members>AV_Test</members>
         <name>ApexClass</name>
     </types>
     <version>43.0</version>
