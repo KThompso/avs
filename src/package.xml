@@ -5,6 +5,7 @@
         <members>AVCrypto</members>
         <members>AVCrypto_Test</members>
         <members>AVForex</members>
+        <members>AVForex_Test</members>
         <members>AVGlobalEquities</members>
         <members>AVIndicators</members>
         <members>AVMockResponseGenerator</members>
