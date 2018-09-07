@@ -6,17 +6,18 @@
             steps:
                 - checkout
                 - restore_cache:
-                    keys: build-tools
+                    keys:
+                        - build-tools-
                 - run:
-                    name: Install build tools
-                    command: bash ./bin/install-build-tools.sh
+                    name: Setup
+                    command: bash bin/install-build-tools.sh
                 - run:
-                    name: Login to test org
+                    name: Authorize
                     command: build_tools/force login -i $SFDC_HOST -u $SFDC_USERNAME -p "$SFDC_PASSWORD$SFDC_SECURITY_TOKEN"
                 - run:
-                    name: Run tests
+                    name: Test
                     command: build_tools/force import -v -c -l RunLocalTests -d src
                 - save_cache:
                     key: build-tools
                     paths:
-                        - build_tools
+                        - ./build_tools
