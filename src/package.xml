@@ -2,6 +2,7 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>AV</members>
+        <members>AV_Test</members>
         <members>AVCrypto</members>
         <members>AVCrypto_Test</members>
         <members>AVForex</members>
@@ -9,10 +10,10 @@
         <members>AVGlobalEquities</members>
         <members>AVGlobalEquities_Test</members>
         <members>AVIndicators</members>
+        <members>AVIndicators_Test</members>
         <members>AVMockResponseGenerator</members>
         <members>AVSector</members>
         <members>AVSector_Test</members>
-        <members>AV_Test</members>
         <name>ApexClass</name>
     </types>
     <version>43.0</version>
