@@ -33,7 +33,4 @@ if (resp.getStatusCode() == 200) {
 }
 ```
 
-Links
------
-
 [alpha-vantage-api-docs]: https://www.alphavantage.co/documentation/
