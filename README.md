@@ -17,7 +17,7 @@ This library is provided as an unmanaged SalesForce Apex package.  To install, c
 Examples
 --------
 
-'''Apex
+```Apex
 HttpResponse resp = AVGlobalEquities.timeSeriesIntraday('MSFT', '5min', null);
 
 if (resp.getStatusCode() == 200) {
@@ -31,7 +31,7 @@ if (resp.getStatusCode() == 200) {
 } else {
     System.debug(LoggingLevel.ERROR, resp.getBody());
 }
-'''
+```
 
 Links
 -----
