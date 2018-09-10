@@ -14,7 +14,8 @@
                 - run:
                     name: Static Analysis
                     command: build_tools/pmd/bin/run.sh pmd -d src/ \
-                        -R rulesets/apex-basic.xml -f html
+                        -R rulesets/apex-basic.xml -f text \
+                        -r static-analysis.txt
                 - run:
                     name: Authorize
                     command: build_tools/force login -i $SFDC_HOST -u $SFDC_USERNAME -p "$SFDC_PASSWORD$SFDC_SECURITY_TOKEN"
@@ -25,3 +26,5 @@
                     key: build-tools-{{ .Environment.CACHE_VERSION }}
                     paths:
                         - build_tools
+                - store_artifacts:
+                    path: static-analysis.txt
