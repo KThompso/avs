@@ -10,6 +10,7 @@ financial market data.  This project has no direct affiliation with Alpha
 Vantage.
 
 ApexDocs for this project can be found [here][gh-pages].
+
 AlphaVantage API Documentation can be found [here][alpha-vantage-api-docs].
 
 Install
