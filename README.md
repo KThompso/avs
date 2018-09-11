@@ -7,6 +7,8 @@ Documentation
 
 A simple Apex client library for using the [Alpha Vantage API][alpha-vantage-api-docs].  Alpha Vantage provides free and paid access to financial market data.  This project has no direct affiliation with Alpha Vantage.
 
+ApexDocs can be found [here][gh-pages].
+
 Install
 -------
 
@@ -34,3 +36,4 @@ if (resp.getStatusCode() == 200) {
 ```
 
 [alpha-vantage-api-docs]: https://www.alphavantage.co/documentation/
+[gh-pages]: https://kthompso.github.io/avs
