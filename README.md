@@ -5,9 +5,7 @@
 Documentation
 -------------
 
-A simple Apex client library for using the [Alpha Vantage API][alpha-vantage-api-docs].  Alpha Vantage provides free and paid access to
-financial market data.  This project has no direct affiliation with Alpha
-Vantage.
+A simple Apex client library for using the [Alpha Vantage API][alpha-vantage-api-docs].  Alpha Vantage provides free and paid access to financial market data.  This project has no direct affiliation with Alpha Vantage.
 
 ApexDocs for this project can be found [here][gh-pages].
 
@@ -16,11 +14,12 @@ AlphaVantage API Documentation can be found [here][alpha-vantage-api-docs].
 Install
 -------
 
-This library is provided as an unmanaged SalesForce package.  Clone this
-repository and deploy the `src` directory to your SalesForce org.  E.g.
-using the [Force CLI tool][force-cli]:
+This library is provided as an unmanaged SalesForce package.  Clone this repository and deploy the `src` directory to your SalesForce org.  E.g. using the [Force CLI tool][force-cli]:
 
-`git clone https://github.com/KThompso/avs.git && force import -d avs/src/`
+```Bash
+$ git clone https://github.com/KThompso/avs.git
+$ force login -i test && force import -d avs/src/
+```
 
 Examples
 --------
