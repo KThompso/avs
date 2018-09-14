@@ -1,5 +1,25 @@
+/**
+ * @description This class contains utility functions for interacting with the
+ * Alpha Vantage Forex API.  The functions and parameters available on the
+ * Alpha Vantage API are listed in the Alpha Vantage documentation,
+ * https://www.alphavantage.co/documentation/
+ *
+ * @group           AlphaVantage
+ * @group-content   ../../ApexDocContent/AlphaVantage.htm
+ *
+ * @author  Kyle Thompson-Bass
+ * @date    2018
+ */
 public class AVForex {
 
+    /**
+     * @description Get the exchange rate from one currency to another.
+     *
+     * @param fromCurrency
+     * @param toCurrency
+     * @param params
+     * @return
+     */
     public static HttpResponse exchangeRate(String fromCurrency,
         String toCurrency, Map<String, String> params)
     {
@@ -13,6 +33,15 @@ public class AVForex {
         return AV.send('CURRENCY_EXCHANGE_RATE', params);
     }
 
+    /**
+     * @description Get the intraday time series from one currency to another.
+     *
+     * @param fromCurrency
+     * @param toCurrency
+     * @param internval
+     * @param params
+     * @return
+     */
     public static HttpResponse intraday(String fromCurrency,
         String toCurrency, String interval, Map<String, String> params)
     {
@@ -27,6 +56,14 @@ public class AVForex {
         return AV.send('FX_INTRADAY', params);
     }
 
+    /**
+     * @description Get the daily time series from one currency to another.
+     *
+     * @param fromCurrency
+     * @param toCurrency
+     * @param params
+     * @return
+     */
     public static HttpResponse daily(String fromCurrency,
         String toCurrency, Map<String, String> params)
     {
@@ -40,6 +77,15 @@ public class AVForex {
         return AV.send('FX_DAILY', params);
     }
 
+    /**
+     * @description Get the weekly time series of exchange rates from one
+     * currency to another.
+     *
+     * @param fromCurrency
+     * @param toCurrency
+     * @param params
+     * @return
+     */
     public static HttpResponse weekly(String fromCurrency,
         String toCurrency, Map<String, String> params)
     {
@@ -53,6 +99,15 @@ public class AVForex {
         return AV.send('FX_WEEKLY', params);
     }
 
+    /**
+     * @description Get the monthly time series of exchange rates from one
+     * currency to another.
+     *
+     * @param fromCurrency
+     * @param toCurrency
+     * @param params
+     * @return
+     */
     public static HttpResponse monthly(String fromCurrency,
         String toCurrency, Map<String, String> params)
     {
