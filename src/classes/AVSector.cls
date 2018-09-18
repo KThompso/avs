@@ -28,7 +28,7 @@ public class AVSector {
      * @response
      */
     public static HttpResponse sector() {
-        return sector('SECTOR', null);
+        return AV.send('SECTOR', null);
     }
 
 }
