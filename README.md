@@ -5,21 +5,22 @@
 Documentation
 -------------
 
-A simple Apex client library for using the [Alpha Vantage API][alpha-vantage-api-docs].  Alpha Vantage provides free and paid access to financial market data.  This project has no direct affiliation with Alpha Vantage.
+A simple Apex client library for using the [Alpha Vantage][alpha-vantage-homepage] API.  Alpha Vantage provides free and paid access to financial market data.  This project has no direct affiliation with Alpha Vantage.  For the full list of functions and parameters used by the AlphaVantage API visit their [API documentation][alpha-vantage-api-docs].
 
 ApexDocs for this project can be found [here][gh-pages].
 
-AlphaVantage API Documentation can be found [here][alpha-vantage-api-docs].
+Alpha Vantage API Documentation can be found [here][alpha-vantage-api-docs].
 
 Install
 -------
 
-This tool is provided as an unmanaged SalesForce package.
+This project is provided as an unmanaged SalesForce package.  To install:
 
-Clone this repository and deploy the `src` directory to your SalesForce org.  E.g. using the [Force CLI tool][force-cli]:
+1. Clone this repository.  `git clone https://github.com/KThompso/avs.git`
+2. Change the value of the `API_KEY` variable in `AV.cls` to your Alpha Vantage API key.  Don't have one?  Request one for free [here][alpha-vantage-api-key-request].
+3. Deploy the `src` directory to your SalesForce org.  E.g. using the [ForceCLI][force-cli] tool:
 
 ```Bash
-$ git clone https://github.com/KThompso/avs.git
 $ force login -i test && force import -d avs/src/
 ```
 
@@ -42,6 +43,8 @@ if (resp.getStatusCode() == 200) {
 }
 ```
 
+[alpha-vantage-homepage]: https://www.alphavantage.co
 [alpha-vantage-api-docs]: https://www.alphavantage.co/documentation/
+[alpha-vantage-api-key-request]: https://www.alphavantage.co/support/#api-key
 [force-cli]: https://force-cli.heroku.com/
 [gh-pages]: https://kthompso.github.io/avs
