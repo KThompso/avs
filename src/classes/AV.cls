@@ -35,7 +35,7 @@ public with sharing class AV {
         String endpoint = BASE_URL + '/query?function=' + function
             + '&API_KEY=' + API_KEY;
 
-        if (params != null)
+        if (params != null) {
             for (String key : params.keySet()) {
                 endpoint += '&' + key + '=' + params.get(key);
             }
