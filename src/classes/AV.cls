@@ -21,8 +21,8 @@ public with sharing class AV {
 
     /**
      * @description A low level function that sends a request to the Alpha
-     * Vantage API.  This should not typically be invoked outside of the wrapper
-     * methods.
+     * Vantage API.  This would not typically be invoked outside of the
+     * wrapper methods provided by this package.
      *
      * @param   function    The function to call, e.g. TIME_SERIES_INTRADAY
      * @param   params      Map of URL parameter names to their values.  See the
@@ -35,12 +35,10 @@ public with sharing class AV {
         String endpoint = BASE_URL + '/query?function=' + function
             + '&API_KEY=' + API_KEY;
 
-        if (params == null) {
-            params = new Map<String, String>();
-        }
-
-        for (String key : params.keySet()) {
-            endpoint += '&' + key + '=' + params.get(key);
+        if (params != null)
+            for (String key : params.keySet()) {
+                endpoint += '&' + key + '=' + params.get(key);
+            }
         }
 
         HttpRequest req = new HttpRequest();
