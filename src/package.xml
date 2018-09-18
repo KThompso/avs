@@ -16,5 +16,9 @@
         <members>AVSector_Test</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>AlphaVantage</members>
+        <name>RemoteSiteSetting</name>
+    </types>
     <version>43.0</version>
 </Package>

@@ -14,7 +14,9 @@ AlphaVantage API Documentation can be found [here][alpha-vantage-api-docs].
 Install
 -------
 
-This library is provided as an unmanaged SalesForce package.  Clone this repository and deploy the `src` directory to your SalesForce org.  E.g. using the [Force CLI tool][force-cli]:
+This tool is provided as an unmanaged SalesForce package.
+
+Clone this repository and deploy the `src` directory to your SalesForce org.  E.g. using the [Force CLI tool][force-cli]:
 
 ```Bash
 $ git clone https://github.com/KThompso/avs.git
