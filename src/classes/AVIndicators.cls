@@ -1,3 +1,15 @@
+/**
+ * @description This class contains utility functions for interacting with the
+ * Alpha Vantage technical indicators API.  The functions and parameters
+ * available on the Alpha Vantage API are listed in the Alpha Vantage
+ * documentation: www.alphavantage.co/documentation/.
+ *
+ * @group           AlphaVantage
+ * @group-content   ../../ApexDocContent/AlphaVantage.htm
+ *
+ * @author  Kyle Thompson-Bass
+ * @date    2018
+ */
 public class AVIndicators {
 
     private static HttpResponse getIndicator(String indicator, String symbol,
@@ -32,7 +44,16 @@ public class AVIndicators {
         return getIndicator(indicator, symbol, interval, params);
     }
 
-    // Simple moving average
+    /**
+     * @description Simple moving average
+     *
+     * @param symbol
+     * @param interval
+     * @param timePeriod
+     * @param seriesType
+     * @param params
+     * @return
+     */
     public static HttpResponse sma(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
     {
@@ -40,7 +61,16 @@ public class AVIndicators {
             params);
     }
 
-    // Exponential moving average
+    /**
+     * @description Exponential moving average
+     *
+     * @param symbol
+     * @param interval
+     * @param timePeriod
+     * @param seriesType
+     * @param params
+     * @return
+     */
     public static HttpResponse ema(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
     {
@@ -48,7 +78,16 @@ public class AVIndicators {
             params);
     }
 
-    // Weighted moving average
+    /**
+     * @description Weighted moving average
+     *
+     * @param symbol
+     * @param interval
+     * @param timePeriod
+     * @param seriesType
+     * @param params
+     * @return
+     */
     public static HttpResponse wma(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
     {
@@ -64,7 +103,9 @@ public class AVIndicators {
             params);
     }
 
-    // Triple exponential moving average
+    /**
+     * @description Triple exponential moving average
+     */
     public static HttpResponse tema(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
     {
@@ -72,7 +113,9 @@ public class AVIndicators {
             params);
     }
 
-    // Trinagular moving average
+    /**
+     * @description Trinagular moving average
+     */
     public static HttpResponse trima(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
     {
@@ -80,7 +123,9 @@ public class AVIndicators {
             params);
     }
 
-    // Kaufman adaptive moving average
+    /**
+     * @description Kaufman adaptive moving average
+     */
     public static HttpResponse kama(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
     {
@@ -88,14 +133,18 @@ public class AVIndicators {
             params);
     }
 
-    // MESA adaptive moving average
+    /**
+     * @description MESA adaptive moving average
+     */
     public static HttpResponse mama(String symbol, String interval,
         string seriesType, Map<String, String> params)
     {
         return getIndicator('MAMA', symbol, interval, null, seriesType, params);
     }
 
-    // Triple exponential moving average 
+    /**
+     * @description Triple exponential moving average 
+     */
     public static HttpResponse t3(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
     {
@@ -103,14 +152,18 @@ public class AVIndicators {
             params);
     }
 
-    // Average convergence / divergence
+    /**
+     * @description Average convergence / divergence
+     */
     public static HttpResponse macd(String symbol, String interval,
         string seriesType, Map<String, String> params)
     {
         return getIndicator('MACD', symbol, interval, null, seriesType, params);
     }
 
-    // Moving average convergence / divergence
+    /**
+     * @description Moving average convergence / divergence
+     */
     public static HttpResponse macdext(String symbol, String interval,
         string seriesType, Map<String, String> params)
     {
@@ -118,21 +171,27 @@ public class AVIndicators {
                 params);
     }
 
-    // Stochastic oscillator
+    /**
+     * @description Stochastic oscillator
+     */
     public static HttpResponse stoch(String symbol, String interval,
         Map<String, String> params)
     {
         return getIndicator('STOCH', symbol, interval, params);
     }
 
-    // Stochastic fast
+    /**
+     * @description Stochastic fast
+     */
     public static HttpResponse stochf(String symbol, String interval,
         Map<String, String> params)
     {
         return getIndicator('STOCHF', symbol, interval, params);
     }
 
-    // Relative strength index
+    /**
+     * @description Relative strength index
+     */
     public static HttpResponse rsi(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
     {
@@ -140,7 +199,9 @@ public class AVIndicators {
             params);
     }
 
-    // Stochastic relative strength index
+    /**
+     * @description Stochastic relative strength index
+     */
     public static HttpResponse stochrsi(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
     {
@@ -148,7 +209,9 @@ public class AVIndicators {
             seriesType, params);
     }
 
-    // Williams' %R
+    /**
+     * @description Williams' %R
+     */
     public static HttpResponse willr(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
@@ -156,35 +219,45 @@ public class AVIndicators {
                 params);
     }
 
-    // Average directional movement index
+    /**
+     * @description Average directional movement index
+     */
     public static HttpResponse adx(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
         return getIndicator('ADX', symbol, interval, timePeriod, null, params);
     }
 
-    // Average directional movement index rating
+    /**
+     * @description Average directional movement index rating
+     */
     public static HttpResponse adxr(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
         return getIndicator('ADXR', symbol, interval, timePeriod, null, params);
     }
 
-    // Absolute price oscillator
+    /**
+     * @description Absolute price oscillator
+     */
     public static HttpResponse apo(String symbol, String interval,
         string seriesType, Map<String, String> params)
     {
         return getIndicator('APO', symbol, interval, null, seriesType, params);
     }
 
-    // Percentage price oscillator
+    /**
+     * @description Percentage price oscillator
+     */
     public static HttpResponse ppo(String symbol, String interval,
         string seriesType, Map<String, String> params)
     {
         return getIndicator('PPO', symbol, interval, null, seriesType, params);
     }
 
-    // Momentum
+    /**
+     * @description Momentum
+     */
     public static HttpResponse mom(String symbol, String interval,
         String timePeriod, String seriesType, Map<String, String> params)
     {
@@ -192,42 +265,54 @@ public class AVIndicators {
                params);
     }
 
-    // Balance of powers
+    /**
+     * @description Balance of powers
+     */
     public static HttpResponse bop(String symbol, String interval,
         Map<String, String> params)
     {
         return getIndicator('BOP', symbol, interval, params);
     }
 
-    // Commodity channel index
+    /**
+     * @description Commodity channel index
+     */
     public static HttpResponse cci(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
         return getIndicator('CCI', symbol, interval, timePeriod, null, params);
     }
 
-    // Change momentum oscillator
+    /**
+     * @description Change momentum oscillator
+     */
     public static HttpResponse cmo(String symbol, String interval,
         string seriesType, Map<String, String> params)
     {
         return getIndicator('CMO', symbol, interval, null, seriesType, params);
     }
 
-    // Rate of change
+    /**
+     * @description Rate of change
+     */
     public static HttpResponse roc(String symbol, String interval,
         string seriesType, Map<String, String> params)
     {
         return getIndicator('ROC', symbol, interval, null, seriesType, params);
     }
 
-    // Rate of change ratio
+    /**
+     * @description Rate of change ratio
+     */
     public static HttpResponse rocr(String symbol, String interval,
         string seriesType, Map<String, String> params)
     {
         return getIndicator('ROCR', symbol, interval, null, seriesType, params);
     }
 
-    // Aroon
+    /**
+     * @description Aroon
+     */
     public static HttpResponse aroon(String symbol, String interval,
         string timePeriod, Map<String, String> params)
     {
@@ -235,7 +320,9 @@ public class AVIndicators {
                 params);
     }
 
-    // Aroon oscillator
+    /**
+     * @description Aroon oscillator
+     */
     public static HttpResponse aroonosc(String symbol, String interval,
         string timePeriod, Map<String, String> params)
     {
@@ -243,14 +330,19 @@ public class AVIndicators {
                 params);
     }
 
-    // Money flow index
+    /**
+     * @description Money flow index
+     */
     public static HttpResponse mfi(String symbol, String interval,
         string timePeriod, Map<String, String> params)
     {
         return getIndicator('MFI', symbol, interval, timePeriod, null, params);
     }
 
-    // 1-day r ate of change of a triple smooth exponential moving average
+    /**
+     * @description 1-day r ate of change of a triple smooth exponential moving
+     * average
+     */
     public static HttpResponse trix(String symbol, String interval,
         String timePeriod, String seriesType, Map<String, String> params)
     {
@@ -258,21 +350,27 @@ public class AVIndicators {
                params);
     }
 
-    // Ultimate oscillator
+    /**
+     * @description Ultimate oscillator
+     */
     public static HttpResponse ultosc(String symbol, String interval,
         Map<String, String> params)
     {
         return getIndicator('ULTOSC', symbol, interval, params);
     }
 
-    // Directional movement index
+    /**
+     * @description Directional movement index
+     */
     public static HttpResponse dx(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
         return getIndicator('DX', symbol, interval, timePeriod, null, params);
     }
 
-    // Minus directional indicator
+    /**
+     * @description Minus directional indicator
+     */
     public static HttpResponse minusDI(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
@@ -280,7 +378,9 @@ public class AVIndicators {
                 params);
     }
 
-    // Plus directional indicator
+    /**
+     * @description Plus directional indicator
+     */
     public static HttpResponse plusDI(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
@@ -288,7 +388,9 @@ public class AVIndicators {
                 params);
     }
 
-    // Minus directional movement
+    /**
+     * @description Minus directional movement
+     */
     public static HttpResponse minusDM(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
@@ -296,7 +398,9 @@ public class AVIndicators {
                 params);
     }
 
-    // Plus directional movement
+    /**
+     * @description Plus directional movement
+     */
     public static HttpResponse plusDM(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
@@ -304,7 +408,9 @@ public class AVIndicators {
                 params);
     }
 
-    // Bollinger bands
+    /**
+     * @description Bollinger bands
+     */
     public static HttpResponse bbands(String symbol, String interval,
         String timePeriod, String seriesType, Map<String, String> params)
     {
@@ -312,7 +418,9 @@ public class AVIndicators {
                 params);
     }
 
-    // Midpoint (high + low)/2
+    /**
+     * @description Midpoint (high + low)/2
+     */
     public static HttpResponse midpoint(String symbol, String interval,
         String timePeriod, String seriesType, Map<String, String> params)
     {
@@ -320,7 +428,9 @@ public class AVIndicators {
                 seriesType, params);
     }
 
-    // Midprice (high + low)/2
+    /**
+     * @description Midprice (high + low)/2
+     */
     public static HttpResponse midprice(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
@@ -328,21 +438,27 @@ public class AVIndicators {
                 params);
     }
 
-    // Parabolic SAR
+    /**
+     * @description Parabolic SAR
+     */
     public static HttpResponse sar(String symbol, String interval,
         Map<String, String> params)
     {
         return getIndicator('SAR', symbol, interval, params);
     }
 
-    // True range
+    /**
+     * @description True range
+     */
     public static HttpResponse trange(String symbol, String interval,
         Map<String, String> params)
     {
         return getIndicator('TRANGE', symbol, interval, params);
     }
 
-    // Average true range
+    /**
+     * @description Average true range
+     */
     public static HttpResponse atr(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
@@ -350,7 +466,9 @@ public class AVIndicators {
                params);
     }
 
-    // Normalized average true range
+    /**
+     * @description Normalized average true range
+     */
     public static HttpResponse natr(String symbol, String interval,
         String timePeriod, Map<String, String> params)
     {
@@ -358,28 +476,36 @@ public class AVIndicators {
                params);
     }
 
-    // Chaikin A/D line
+    /**
+     * @description Chaikin A/D line
+     */
     public static HttpResponse ad(String symbol, String interval,
         Map<String, String> params)
     {
         return getIndicator('AD', symbol, interval, params);
     }
 
-    // Chaikin A/D oscillator
+    /**
+     * @description Chaikin A/D oscillator
+     */
     public static HttpResponse adosc(String symbol, String interval,
         Map<String, String> params)
     {
         return getIndicator('ADOSC', symbol, interval, params);
     }
 
-    // Balance volume
+    /**
+     * @description Balance volume
+     */
     public static HttpResponse obv(String symbol, String interval,
         Map<String, String> params)
     {
         return getIndicator('OBV', symbol, interval, params);
     }
 
-    // Hilbert transform instantaneous trendline
+    /**
+     * @description Hilbert transform instantaneous trendline
+     */
     public static HttpResponse htTrendline(String symbol, String interval,
         String seriesType, Map<String, String> params)
     {
@@ -387,7 +513,9 @@ public class AVIndicators {
                 params);
     }
 
-    // Hilbert transform sine wave
+    /**
+     * @description Hilbert transform sine wave
+     */
     public static HttpResponse htSine(String symbol, String interval,
         String seriesType, Map<String, String> params)
     {
@@ -395,7 +523,9 @@ public class AVIndicators {
                 params);
     }
 
-    // Hilbert transform trend vs cycle mode
+    /**
+     * @description Hilbert transform trend vs cycle mode
+     */
     public static HttpResponse htTrendmode(String symbol, String interval,
         String seriesType, Map<String, String> params)
     {
@@ -403,7 +533,9 @@ public class AVIndicators {
                 params);
     }
 
-    // Hilbert transform dominant cycle period
+    /**
+     * @description Hilbert transform dominant cycle period
+     */
     public static HttpResponse htDCPeriod(String symbol, String interval,
         String seriesType, Map<String, String> params)
     {
@@ -411,7 +543,9 @@ public class AVIndicators {
                 params);
     }
 
-    // Hilbert transform dominant cycle phase 
+    /**
+     * @description Hilbert transform dominant cycle phase 
+     */
     public static HttpResponse htDCPhase(String symbol, String interval,
         String seriesType, Map<String, String> params)
     {
@@ -419,7 +553,9 @@ public class AVIndicators {
                 params);
     }
 
-    // Hilbert transform phasor components
+    /**
+     * @description Hilbert transform phasor components
+     */
     public static HttpResponse htPhasor(String symbol, String interval,
         String seriesType, Map<String, String> params)
     {
