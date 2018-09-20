@@ -18,15 +18,21 @@ public class AVTimeSeriesResponse {
             p.volume = Integer.valueOf(data.get('5. volume'));
             points.add(p);
         }
+        points.sort();
     }
 
-    public class Point {
+    public class Point implements Comparable {
         public String timestamp {get; set;}
         public Double open {get; set;}
         public Double high {get; set;}
         public Double low {get; set;}
         public Double close {get; set;}
         public Integer volume {get; set;}
+
+        public Integer compareTo(Object o) {
+            Point p = (Point) o;
+            return timestamp.compareTo(p.timestamp);
+        }
     }
 
 }
