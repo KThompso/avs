@@ -28,7 +28,7 @@ Examples
 --------
 
 ```Apex
-HttpResponse resp = AVGlobalEquities.timeSeriesIntraday('MSFT', '5min', null);
+HttpResponse resp = AVStock.intraday('MSFT', '5min', null);
 
 if (resp.getStatusCode() == 200) {
     Map<String, Object> m = (Map<String, Object>) JSON.deserializeUntyped(resp.getBody());

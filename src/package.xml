@@ -7,8 +7,8 @@
         <members>AVCrypto_Test</members>
         <members>AVForex</members>
         <members>AVForex_Test</members>
-        <members>AVGlobalEquities</members>
-        <members>AVGlobalEquities_Test</members>
+        <members>AVStock</members>
+        <members>AVStock_Test</members>
         <members>AVIndicators</members>
         <members>AVIndicators_Test</members>
         <members>AVMockResponseGenerator</members>

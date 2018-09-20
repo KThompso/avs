@@ -1,4 +1,4 @@
-public class AVGlobalEquities {
+public class AVStock {
 
     public static HttpResponse intraday(String symbol,
         String interval, Map<String, String> params)
