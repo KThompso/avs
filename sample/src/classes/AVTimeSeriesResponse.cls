@@ -11,6 +11,7 @@ public class AVTimeSeriesResponse {
 
             Point p = new Point();
             p.timestamp = k;
+            p.timeval = DateTime.valueOf(k).format('h:mm a');
             p.open = Double.valueOf(data.get('1. open'));
             p.high = Double.valueOf(data.get('2. high'));
             p.low = Double.valueOf(data.get('3. low'));
@@ -23,6 +24,7 @@ public class AVTimeSeriesResponse {
 
     public class Point implements Comparable {
         public String timestamp {get; set;}
+        public String timeval {get; set;}
         public Double open {get; set;}
         public Double high {get; set;}
         public Double low {get; set;}
