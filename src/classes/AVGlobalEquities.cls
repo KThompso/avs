@@ -1,6 +1,6 @@
 public class AVGlobalEquities {
 
-    public static HttpResponse timeSeriesIntraday(String symbol,
+    public static HttpResponse intraday(String symbol,
         String interval, Map<String, String> params)
     {
         if (params == null) {
@@ -14,7 +14,7 @@ public class AVGlobalEquities {
     }
 
 
-    public static HttpResponse timeSeriesDaily(String symbol,
+    public static HttpResponse daily(String symbol,
         Map<String, String> params)
     {
         if (params == null) {
@@ -26,7 +26,7 @@ public class AVGlobalEquities {
         return AV.send('TIME_SERIES_DAILY', params);
     }
 
-    public static HttpResponse timeSeriesDailyAdjusted(String symbol,
+    public static HttpResponse dailyAdjusted(String symbol,
         Map<String, String> params)
     {
         if (params == null) {
@@ -38,7 +38,7 @@ public class AVGlobalEquities {
         return AV.send('TIME_SERIES_DAILY_ADJUSTED', params);
     }
 
-    public static HttpResponse timeSeriesWeekly(String symbol,
+    public static HttpResponse weekly(String symbol,
         Map<String, String> params)
     {
         if (params == null) {
@@ -50,7 +50,7 @@ public class AVGlobalEquities {
         return AV.send('TIME_SERIES_WEEKLY', params);
     }
 
-    public static HttpResponse timeSeriesWeeklyAdjusted(String symbol,
+    public static HttpResponse weeklyAdjusted(String symbol,
         Map<String, String> params)
     {
         if (params == null) {
@@ -62,7 +62,7 @@ public class AVGlobalEquities {
         return AV.send('TIME_SERIES_WEEKLY_ADJUSTED', params);
     }
 
-    public static HttpResponse timeSeriesMonthly(String symbol,
+    public static HttpResponse monthly(String symbol,
         Map<String, String> params)
     {
         if (params == null) {
@@ -74,7 +74,7 @@ public class AVGlobalEquities {
         return AV.send('TIME_SERIES_MONTHLY', params);
     }
 
-    public static HttpResponse timeSeriesMonthlyAdjusted(String symbol,
+    public static HttpResponse monthlyAdjusted(String symbol,
         Map<String, String> params)
     {
         if (params == null) {
