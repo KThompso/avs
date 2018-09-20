@@ -1,0 +1,23 @@
+<apex:page controller="AVLineChartController">
+    <apex:chart height="400" width="700" data="{!data}">
+        <apex:legend position="right"/>
+        <apex:axis type="Category" position="bottom" fields="timestamp"
+            title="Date"/>
+        <apex:axis type="Numeric" position="left" fields="high,low,open,close"
+            title="Price">
+            <apex:chartLabel rotate="315"/>
+        </apex:axis>
+        <apex:axis type="Numeric" position="right" fields="volume"
+            title="Volume"/>
+        <apex:lineSeries title="High" axis="left" xField="timestamp" yField="high"
+            markerType="circle" markerSize="2" />
+        <apex:lineSeries title="Low" axis="left" xField="timestamp" yField="low"
+            markerType="circle" markerSize="2" />
+        <apex:lineSeries title="Open" axis="left" xField="timestamp" yField="open"
+            markerType="circle" markerSize="2" />
+        <apex:lineSeries title="Close" axis="left" xField="timestamp" yField="close"
+            markerType="circle" markerSize="2" />
+        <apex:lineSeries title="Volume" axis="right" xField="timestamp" yField="volume"
+            markerType="circle" markerSize="2" />
+    </apex:chart>
+</apex:page>
