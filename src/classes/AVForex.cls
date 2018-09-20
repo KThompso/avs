@@ -1,6 +1,6 @@
 /**
- * @description This class contains utility functions for interacting with the
- * Alpha Vantage Forex API.  The functions and parameters available on the
+ * @description This class contains utility methods for interacting with the
+ * Alpha Vantage Forex API.  The methods and parameters available on the
  * Alpha Vantage API are listed in the Alpha Vantage documentation,
  * www.alphavantage.co/documentation/.
  * List of digital/crypto currencies can be found here:

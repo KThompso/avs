@@ -1,6 +1,6 @@
 /**
- * @description This class contains utility functions for interacting with the
- * Alpha Vantage API.  The functions and parameters available on the Alpha
+ * @description This class contains utility methods for interacting with the
+ * Alpha Vantage API.  The methods and parameters available on the Alpha
  * Vantage API are listed in the Alpha Vantage documentation,
  * https://www.alphavantage.co/documentation/
  *
@@ -27,7 +27,7 @@ public with sharing class AV {
      * @param   function    The function to call, e.g. TIME_SERIES_INTRADAY
      * @param   params      Map of URL parameter names to their values.  See the
      *                      Alpha Vantage API documentation for a full list of
-     *                      functions and parameters.
+     *                      methods and parameters.
      * @return              The HttpResponse from Alpha Vantage.
      */
     public static HttpResponse send(String function, Map<String, String> params)

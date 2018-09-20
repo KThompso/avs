@@ -1,3 +1,15 @@
+/**
+ * @description This class contains utility methods for interacting with the
+ * Alpha Vantage Stock Time Series API.  The methods and parameters available
+ * on the Alpha Vantage API are listed in the Alpha Vantage documentation,
+ * https://www.alphavantage.co/documentation/
+ *
+ * @group           AlphaVantage
+ * @group-content   ../../ApexDocContent/AlphaVantage.htm
+ *
+ * @author  Kyle Thompson-Bass
+ * @date    2018
+ */
 public class AVStock {
 
     public static HttpResponse intraday(String symbol,

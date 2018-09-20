@@ -1,6 +1,6 @@
 /**
- * @description This class contains utility functions for interacting with the
- * Alpha Vantage technical indicators API.  The functions and parameters
+ * @description This class contains utility methods for interacting with the
+ * Alpha Vantage technical indicators API.  The methods and parameters
  * available on the Alpha Vantage API are listed in the Alpha Vantage
  * documentation: www.alphavantage.co/documentation/.
  *
