@@ -33,7 +33,7 @@ public with sharing class AV {
     public static HttpResponse send(String function, Map<String, String> params)
     {
         String endpoint = BASE_URL + '/query?function=' + function
-            + '&API_KEY=' + API_KEY;
+            + '&apikey=' + API_KEY;
 
         if (params != null) {
             for (String key : params.keySet()) {
