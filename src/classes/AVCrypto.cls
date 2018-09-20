@@ -13,11 +13,12 @@
 public class AVCrypto {
 
     /**
-     * @description Gets a time series for cryptocurrency.
+     * @description Get time series data for a digital/crypto currency.
      * 
-     * @param symbol Symbol of the digital/crypto currency
-     * @param market Identifier of the market
-     * @param params Optional query parameters
+     * @param symbol   Symbol of the digital/crypto currency, e.g. BTC
+     * @param market   Identifier of the market, e.g. CYN
+     * @param function Time series function to call, e.g. TIME_SERIES_DAILY
+     * @param params   Optional query parameters
      * @return
      */
     private static HttpResponse timeSeries(String symbol, String market,
@@ -34,7 +35,7 @@ public class AVCrypto {
     }
 
     /**
-     * @description Get the exchange rate between two currencies.
+     * @description Get exchange rate between two currencies.
      *
      * @param fromCurrency Symbol to convert from, e.g. BTC
      * @param toCurrency   Symbol to convert to, e.g. USD
@@ -55,11 +56,11 @@ public class AVCrypto {
     }
 
     /**
-     * @description Get the daily timeseries for a cryptocurrency.
+     * @description Get daily time series data for a digital/crypto currency.
      *
      * @param symbol Symbol of digital/crypto currency, e.g. BTC
      * @param market Market identifier, e.g. CYN
-     * @param params Optional query params
+     * @param params Optional query parameters
      * @return
      */
     public static HttpResponse daily(String symbol, String market,
@@ -69,11 +70,12 @@ public class AVCrypto {
     }
 
     /**
-     * @description Get the weekly timeseries for a cryptocurrency.
+     * @description Get the weekly time series data for a digital/crypto
+     * currency.
      *
      * @param symbol Symbol for a digital/crypto currency, e.g. BTC
      * @param market Market identifier, e.g. CYN
-     * @param params Optional query params
+     * @param params Optional query parameters
      * @return
      */
     public static HttpResponse weekly(String symbol, String market,
@@ -83,11 +85,12 @@ public class AVCrypto {
     }
 
     /**
-     * @description Get the monthly timeseries for a cryptocurrency.
+     * @description Get the monthly time series data for a digital/crypto
+     * currency.
      *
      * @param symbol Symbol for the digital/crypto currency, e.g. BTC
      * @param market Market identifier, e.g. CYN
-     * @param params Optional query params
+     * @param params Optional query parameters
      * @return
      */
     public static HttpResponse monthly(String symbol, String market,
