@@ -1,8 +1,8 @@
 /**
  * @description This class contains utility functions for interacting with the
  * Alpha Vantage cryptocurrency API.  The functions and parameters available on
- * the Alpha Vantage API are listed in the Alpha Vantage documentation,
- * https://www.alphavantage.co/documentation/
+ * the Alpha Vantage API are listed in the Alpha Vantage documentation:
+ * www.alphavantage.co/documentation/.
  *
  * @group           AlphaVantage
  * @group-content   ../../ApexDocContent/AlphaVantage.htm
@@ -15,10 +15,10 @@ public class AVCrypto {
     /**
      * @description Gets a time series for cryptocurrency.
      * 
-     * @param symbol Ticker symbol of the cryptocurrency.
-     * @param market Identifier of the market.
-     * @param params Additional optional parameters.
-     * @return       HttpResponse from Alpha Vantage
+     * @param symbol Symbol of the digital/crypto currency
+     * @param market Identifier of the market
+     * @param params Optional query parameters
+     * @return
      */
     private static HttpResponse timeSeries(String symbol, String market,
         String function, Map<String, String> params)
@@ -36,9 +36,9 @@ public class AVCrypto {
     /**
      * @description Get the exchange rate between two currencies.
      *
-     * @param fromCurrency
-     * @param toCurrency
-     * @param params
+     * @param fromCurrency Symbol to convert from, e.g. BTC
+     * @param toCurrency   Symbol to convert to, e.g. USD
+     * @param params       Optional query parameters
      * @return
      */
     public static HttpResponse exchangeRate(String fromCurrency,
@@ -57,9 +57,9 @@ public class AVCrypto {
     /**
      * @description Get the daily timeseries for a cryptocurrency.
      *
-     * @param symbol
-     * @param market
-     * @param params
+     * @param symbol Symbol of digital/crypto currency, e.g. BTC
+     * @param market Market identifier, e.g. CYN
+     * @param params Optional query params
      * @return
      */
     public static HttpResponse daily(String symbol, String market,
@@ -71,9 +71,9 @@ public class AVCrypto {
     /**
      * @description Get the weekly timeseries for a cryptocurrency.
      *
-     * @param symbol
-     * @param market
-     * @param params
+     * @param symbol Symbol for a digital/crypto currency, e.g. BTC
+     * @param market Market identifier, e.g. CYN
+     * @param params Optional query params
      * @return
      */
     public static HttpResponse weekly(String symbol, String market,
@@ -85,9 +85,9 @@ public class AVCrypto {
     /**
      * @description Get the monthly timeseries for a cryptocurrency.
      *
-     * @param symbol
-     * @param market
-     * @param params
+     * @param symbol Symbol for the digital/crypto currency, e.g. BTC
+     * @param market Market identifier, e.g. CYN
+     * @param params Optional query params
      * @return
      */
     public static HttpResponse monthly(String symbol, String market,

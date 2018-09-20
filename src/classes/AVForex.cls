@@ -2,7 +2,11 @@
  * @description This class contains utility functions for interacting with the
  * Alpha Vantage Forex API.  The functions and parameters available on the
  * Alpha Vantage API are listed in the Alpha Vantage documentation,
- * https://www.alphavantage.co/documentation/
+ * www.alphavantage.co/documentation/.
+ * List of digital/crypto currencies can be found here:
+ * www.alphavantage.co/digital_currency_list/
+ * List of physical currencies can be found here:
+ * www.alphavantage.co/physical_currency_list/.
  *
  * @group           AlphaVantage
  * @group-content   ../../ApexDocContent/AlphaVantage.htm
@@ -15,9 +19,9 @@ public class AVForex {
     /**
      * @description Get the exchange rate from one currency to another.
      *
-     * @param fromCurrency
-     * @param toCurrency
-     * @param params
+     * @param fromCurrency Symbol to convert from, e.g. USD
+     * @param toCurrency   Symbol to convert to, e.g. EUR
+     * @param params       Optional query parameters
      * @return
      */
     public static HttpResponse exchangeRate(String fromCurrency,
@@ -36,10 +40,10 @@ public class AVForex {
     /**
      * @description Get the intraday time series from one currency to another.
      *
-     * @param fromCurrency
-     * @param toCurrency
-     * @param internval
-     * @param params
+     * @param fromCurrency Symbol to convert from, e.g. USD
+     * @param toCurrency   Symbol to convert to, e.g. EUR
+     * @param internval    Time series interval, e.g. 5min
+     * @param params       Optional query parameters
      * @return
      */
     public static HttpResponse intraday(String fromCurrency,
@@ -59,9 +63,9 @@ public class AVForex {
     /**
      * @description Get the daily time series from one currency to another.
      *
-     * @param fromCurrency
-     * @param toCurrency
-     * @param params
+     * @param fromCurrency Symbol to convert from, e.g. USD
+     * @param toCurrency   Symbol to convert to, e.g. EUR
+     * @param params       Optional query parameters
      * @return
      */
     public static HttpResponse daily(String fromCurrency,
@@ -81,9 +85,9 @@ public class AVForex {
      * @description Get the weekly time series of exchange rates from one
      * currency to another.
      *
-     * @param fromCurrency
-     * @param toCurrency
-     * @param params
+     * @param fromCurrency Symbol to convert from, e.g. USD
+     * @param toCurrency   Symbol to convert to, e.g. EUR
+     * @param params       Optional query parameters
      * @return
      */
     public static HttpResponse weekly(String fromCurrency,
@@ -103,9 +107,9 @@ public class AVForex {
      * @description Get the monthly time series of exchange rates from one
      * currency to another.
      *
-     * @param fromCurrency
-     * @param toCurrency
-     * @param params
+     * @param fromCurrency Symbol to convert from, e.g. USD
+     * @param toCurrency   Symbol to convert to, e.g. EUR
+     * @param params       Optional query parameters
      * @return
      */
     public static HttpResponse monthly(String fromCurrency,
