@@ -1,4 +1,16 @@
 <apex:page controller="AVLineChartController">
+
+    <apex:pageMessages></apex:pageMessages>
+
+    <apex:form>
+        <apex:inputText value="{!ticker}" id="ticker"/>
+        <apex:selectList value="{!interval}" size="1" required="true">
+            <apex:selectOptions value="{!intervals}"/>
+        </apex:selectList>
+        <apex:commandButton value="Execute" rerender="chartPanel" />
+    </apex:form>
+
+    <apex:outputPanel id="chartPanel">
     <apex:chart height="400" width="700" data="{!data}">
         <apex:legend position="right"/>
         <apex:axis type="Category" position="bottom" fields="timeval"
@@ -20,4 +32,6 @@
         <apex:lineSeries title="Volume" axis="right" xField="timestamp" yField="volume"
             markerType="circle" markerSize="2" />
     </apex:chart>
+    </apex:outputPanel>
+
 </apex:page>

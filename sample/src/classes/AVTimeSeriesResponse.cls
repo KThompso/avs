@@ -1,11 +1,29 @@
 public class AVTimeSeriesResponse {
 
+    public class AVException extends Exception {}
+
     public List<Point> points = new List<Point>();
 
     public void parse(String jsonStr) {
+        // Convert json response into a map and get the time series
         Map<String, Object> m = (Map<String, Object>) JSON.deserializeUntyped(jsonStr);
-        Map<String, Object> timeseries = (Map<String, Object>) m.get('Time Series (5min)');
 
+        String err;
+        if ((err = (String)m.get('Error Message')) != null) {
+            AVException ex = new AVException();
+            ex.setMessage(err);
+            throw ex;
+        }
+
+        Map<String, Object> timeseries;
+        for (String key : m.keySet()) {
+            if (key.startsWith('Time Series')) {
+                timeseries = (Map<String, Object>) m.get(key);
+            }
+        }
+
+        // Convert time series values to points.  Whoever added spaces and
+        // non alphanum chars to these attributes needs a stern talking to...
         for (String k : timeseries.keyset()) {
             Map<String, Object> data = (Map<String, Object>) timeseries.get(k);
 
@@ -19,7 +37,8 @@ public class AVTimeSeriesResponse {
             p.volume = Integer.valueOf(data.get('5. volume'));
             points.add(p);
         }
-        points.sort();
+
+        points.sort(); // Sort the points by date
     }
 
     public class Point implements Comparable {
