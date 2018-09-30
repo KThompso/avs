@@ -2,9 +2,14 @@ public class AVLineChartController {
 
     public String ticker {get; set;}
     public String interval {get; set;}
+    public List<AVTimeSeriesResponse.Point> data {get; private set;}
+
+    public AVLineChartController() {
+        data = new List<AVTimeSeriesResponse.Point>();
+    }
 
     // Return the chart data
-    public List<AVTimeSeriesResponse.Point> getData() {
+    public void getChartData() {
         HttpResponse resp = AVStock.intraday(ticker, interval, null);
         AVTimeSeriesResponse timeseries = new AVTimeSeriesResponse();
 
@@ -13,9 +18,9 @@ public class AVLineChartController {
         } catch (Exception e) {
             ApexPages.addMessage(new ApexPages.Message(
                         ApexPages.Severity.ERROR, e.getMessage()));
-            return new List<AVTimeSeriesResponse.Point>();
         }
-        return timeseries.points;
+
+        data = timeseries.points;
     }
 
     public static List<SelectOption> getIntervals() {
@@ -27,5 +32,5 @@ public class AVLineChartController {
             new SelectOption('60min', '60 minutes')
         };
     }
-    
+
 }

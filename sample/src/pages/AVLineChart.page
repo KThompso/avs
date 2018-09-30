@@ -3,15 +3,27 @@
     <apex:pageMessages></apex:pageMessages>
 
     <apex:form>
-        <apex:inputText value="{!ticker}" id="ticker"/>
-        <apex:selectList value="{!interval}" size="1" required="true">
-            <apex:selectOptions value="{!intervals}"/>
-        </apex:selectList>
-        <apex:commandButton value="Execute" rerender="chartPanel" />
+        <apex:pageBlock title="Alpha Vantage Demo">
+            <apex:pageBlockSection>
+                <apex:pageBlockSectionItem>
+                    <apex:outputText value="Ticker"/>
+                    <apex:inputText value="{!ticker}" id="ticker"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>
+                    <apex:outputText value="Interval"/>
+                    <apex:selectList value="{!interval}" size="1" required="true">
+                        <apex:selectOptions value="{!intervals}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Get Data" action="{!getChartData}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
     </apex:form>
 
     <apex:outputPanel id="chartPanel">
-    <apex:chart height="400" width="700" data="{!data}">
+    <apex:chart data="{!data}" height="700" width="90%">
         <apex:legend position="right"/>
         <apex:axis type="Category" position="bottom" fields="timeval"
             title="Date"/>
