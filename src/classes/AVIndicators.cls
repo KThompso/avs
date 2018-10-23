@@ -6,9 +6,6 @@
  *
  * @group           AlphaVantage
  * @group-content   ../../ApexDocContent/AlphaVantage.htm
- *
- * @author  Kyle Thompson-Bass
- * @date    2018
  */
 public class AVIndicators {
 
@@ -46,13 +43,6 @@ public class AVIndicators {
 
     /**
      * @description Simple moving average
-     *
-     * @param symbol
-     * @param interval
-     * @param timePeriod
-     * @param seriesType
-     * @param params
-     * @return
      */
     public static HttpResponse sma(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
@@ -63,13 +53,6 @@ public class AVIndicators {
 
     /**
      * @description Exponential moving average
-     *
-     * @param symbol
-     * @param interval
-     * @param timePeriod
-     * @param seriesType
-     * @param params
-     * @return
      */
     public static HttpResponse ema(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
@@ -80,13 +63,6 @@ public class AVIndicators {
 
     /**
      * @description Weighted moving average
-     *
-     * @param symbol
-     * @param interval
-     * @param timePeriod
-     * @param seriesType
-     * @param params
-     * @return
      */
     public static HttpResponse wma(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
@@ -95,7 +71,9 @@ public class AVIndicators {
             params);
     }
 
-    // Double exponential moving average
+    /**
+     * @description Double exponential moving average
+     */
     public static HttpResponse dema(String symbol, String interval,
         String timePeriod, string seriesType, Map<String, String> params)
     {

@@ -10,9 +10,6 @@
  *
  * @group           AlphaVantage
  * @group-content   ../../ApexDocContent/AlphaVantage.htm
- *
- * @author  Kyle Thompson-Bass
- * @date    2018
  */
 public class AVForex {
 

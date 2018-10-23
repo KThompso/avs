@@ -6,9 +6,6 @@
  *
  * @group           AlphaVantage
  * @group-content   ../../ApexDocContent/AlphaVantage.htm
- *
- * @author  Kyle Thompson-Bass
- * @date    2018
  */
 public class AVSector {
 
@@ -23,7 +20,8 @@ public class AVSector {
     }
 
     /**
-     * @description Convience function that takes no parameters and returns      * the sector performances calculated from S&P500 incumbents.
+     * @description Convience function that takes no parameters and returns
+     * the sector performances calculated from S&P500 incumbents.
      *
      * @response
      */
