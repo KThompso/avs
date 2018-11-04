@@ -16,8 +16,9 @@ public with sharing class AV {
      * Set this to your Alpha Vantage API Key, or get one at:
      * https://www.alphavantage.co/support/#api-key
      */
-    static final String API_KEY = 'CHANGE_ME';
-    public static final String BASE_URL = 'https://www.alphavantage.co';
+    private static final String API_KEY = 'CHANGE_ME';
+
+    private static final String BASE_URL = 'https://www.alphavantage.co';
 
     /**
      * @description A low level function that sends a request to the Alpha
