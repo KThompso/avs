@@ -43,17 +43,6 @@ if (resp.getStatusCode() == 200) {
 }
 ```
 
-FAQ
--------
-**Q:** *What is the benefit of using this library?*  
-**A:** Not much.
-
-**Q:** *Is it secure to store my API token in source code?*  
-**A:** No.  If having your API token exposed is an issue (or if you paid for one) do not store it in the AV.cls file.  At the bare minimum store it in a custom setting.
-
-**Q:** *Why do timeseries responses included the interval in the json key?*  
-**A:** Building APIs is hard.
-
 [alpha-vantage-homepage]: https://www.alphavantage.co
 [alpha-vantage-api-docs]: https://www.alphavantage.co/documentation/
 [alpha-vantage-api-key-request]: https://www.alphavantage.co/support/#api-key
