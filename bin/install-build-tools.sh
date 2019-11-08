@@ -3,8 +3,6 @@ set -e
 
 if [ ! -e build_tools ]; then
 
-    sudo apt-get update
-
     if [ ! $(command -v wget) ]; then
         sudo apt-get -y install wget
     fi
