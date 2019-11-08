@@ -11,7 +11,7 @@ if [ ! -e build_tools ]; then
     fi
 
     mkdir build_tools
-    wget 'https://force-cli.heroku.com/releases/v0.24.3/linux-amd64/force'
+    wget 'https://force-cli.herokuapp.com/releases/v0.26.1/linux-amd64/force'
     chmod +x ./force
     mv force build_tools/force
 
