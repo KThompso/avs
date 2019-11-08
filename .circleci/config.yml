@@ -21,7 +21,7 @@
                     command: build_tools/force login -i $SFDC_HOST -u $SFDC_USERNAME -p "$SFDC_PASSWORD$SFDC_SECURITY_TOKEN"
                 - run:
                     name: Test
-                    command: build_tools/force import -v -c -l RunLocalTests -d src
+                    command: build_tools/force import -v -c -test -d src
                 - save_cache:
                     key: build-tools-{{ .Environment.CACHE_VERSION }}
                     paths:
