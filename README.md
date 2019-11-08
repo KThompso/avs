@@ -18,10 +18,10 @@ This project is provided as an unmanaged SalesForce package.  To install:
 
 1. Clone this repository.  `git clone https://github.com/KThompso/avs.git`
 2. Change the value of the `API_KEY` variable in `AV.cls` to your Alpha Vantage API key.  Don't have one?  Request one for free [here][alpha-vantage-api-key-request].
-3. Deploy the `src` directory to your SalesForce org.  E.g. using the [ForceCLI][force-cli] tool to deploy to your test org:
+3. Build the package: `$ (cd avs && make salesforce-package)`
+4. Deploy the `package` directory to your SalesForce org.  E.g. using the [ForceCLI][force-cli] tool to deploy to your test org:
 
 ```Bash
-$ (cd avs && make salesforce-package)
 $ force login -i test && force import -d avs/package/
 ```
 
