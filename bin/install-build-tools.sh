@@ -2,16 +2,19 @@ set -x
 set -e
 
 if [ ! -e build_tools ]; then
+
+    sudo apt-get update
+
     if [ ! $(command -v wget) ]; then
-        sudo apt-get update && sudo apt-get -y install wget
+        sudo apt-get -y install wget
     fi
 
     if [ ! $(command -v unzip) ]; then
-        sudo apt-get update && sudo apt-get -y install unzip 
+        sudo apt-get -y install unzip 
     fi
 
     if [ ! $(command -v make) ]; then
-        sudo apt-get update && sudo apt-get -y install make 
+        sudo apt-get -y install make 
     fi
 
     mkdir build_tools
