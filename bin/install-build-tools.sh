@@ -10,6 +10,10 @@ if [ ! -e build_tools ]; then
         apt-get update && apt-get -y install unzip 
     fi
 
+    if [ ! $(command -v make) ]; then
+        apt-get update && apt-get -y install make 
+    fi
+
     mkdir build_tools
     wget 'https://force-cli.herokuapp.com/releases/v0.26.1/linux-amd64/force'
     chmod +x ./force
