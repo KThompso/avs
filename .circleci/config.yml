@@ -24,12 +24,7 @@
                     command: build_tools/force login -i $SFDC_HOST -u $SFDC_USERNAME -p "$SFDC_PASSWORD$SFDC_SECURITY_TOKEN"
                 - run:
                     name: Test
-                    command: build_tools/force import -v -c -d package \
-                        -test $(find package/classes/ -name "*_Test.cls" \
-                        | xargs -I {} basename {} \
-                        | sed -e 's/\..*//'  \
-                        | cat \
-                        | tr '\n' ',')
+                    command: build_tools/force import -v -c -d package -test $(find package/classes/ -name "*_Test.cls" | xargs -I {} basename {} | sed -e 's/\..*//'  | cat | tr '\n' ',')
                 - save_cache:
                     key: build-tools-{{ .Environment.CACHE_VERSION }}
                     paths:
