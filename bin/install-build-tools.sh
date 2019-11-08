@@ -1,19 +1,19 @@
 set -x
 set -e
 
+if [ ! $(command -v wget) ]; then
+    sudo apt-get -y install wget
+fi
+
+if [ ! $(command -v unzip) ]; then
+    sudo apt-get -y install unzip 
+fi
+
+if [ ! $(command -v make) ]; then
+    sudo apt-get -y install make 
+fi
+
 if [ ! -e build_tools ]; then
-
-    if [ ! $(command -v wget) ]; then
-        sudo apt-get -y install wget
-    fi
-
-    if [ ! $(command -v unzip) ]; then
-        sudo apt-get -y install unzip 
-    fi
-
-    if [ ! $(command -v make) ]; then
-        sudo apt-get -y install make 
-    fi
 
     mkdir build_tools
     wget 'https://force-cli.herokuapp.com/releases/v0.26.1/linux-amd64/force'
