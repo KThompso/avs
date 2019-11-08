@@ -13,7 +13,7 @@
                     command: bash bin/install-build-tools.sh
                 - run:
                     name: Build Package 
-                    command: bash make salesforce-package
+                    command: make salesforce-package
                 - run:
                     name: Static Analysis
                     command: build_tools/pmd/bin/run.sh pmd -d src/ \
