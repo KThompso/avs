@@ -21,7 +21,8 @@ This project is provided as an unmanaged SalesForce package.  To install:
 3. Deploy the `src` directory to your SalesForce org.  E.g. using the [ForceCLI][force-cli] tool to deploy to your test org:
 
 ```Bash
-$ force login -i test && force import -d avs/src/
+$ (cd avs && make salesforce-package)
+$ force login -i test && force import -d avs/package/
 ```
 
 Examples
