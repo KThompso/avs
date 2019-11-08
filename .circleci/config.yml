@@ -10,7 +10,7 @@
                         - build-tools-{{ .Environment.CACHE_VERSION }}
                 - run:
                     name: Setup
-                    command: bash sudo bin/install-build-tools.sh
+                    command: bash bin/install-build-tools.sh
                 - run:
                     name: Build Package 
                     command: bash make salesforce-package
