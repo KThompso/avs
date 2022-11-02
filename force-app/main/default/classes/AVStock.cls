@@ -2,10 +2,10 @@
  * @description This class contains utility methods for interacting with the
  * Alpha Vantage Stock Time Series API.  The methods and parameters available
  * on the Alpha Vantage API are listed in the Alpha Vantage documentation,
- * https://www.alphavantage.co/documentation/
+ * https:/www.alphavantage.co/documentation/
  *
  * @group           AlphaVantage
- * @group-content   ../../ApexDocContent/AlphaVantage.htm
+ * @group-content   ../../../../ApexDocContent/AlphaVantage.htm
  */
 public class AVStock {
 

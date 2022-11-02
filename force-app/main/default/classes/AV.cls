@@ -2,10 +2,10 @@
  * @description This class contains utility methods for interacting with the
  * Alpha Vantage API.  The methods and parameters available on the Alpha
  * Vantage API are listed in the Alpha Vantage documentation,
- * https://www.alphavantage.co/documentation/
+ * https:/www.alphavantage.co/documentation/
  *
  * @group           AlphaVantage
- * @group-content   ../../ApexDocContent/AlphaVantage.htm
+ * @group-content   ../../../../ApexDocContent/AlphaVantage.htm
  *
  * @author  Kyle Thompson-Bass
  * @date    2018
@@ -14,11 +14,11 @@ public with sharing class AV {
 
     /**
      * Set this to your Alpha Vantage API Key, or get one at:
-     * https://www.alphavantage.co/support/#api-key
+     * https:/www.alphavantage.co/support/#api-key
      */
     private static final String API_KEY = 'CHANGE_ME';
 
-    private static final String BASE_URL = 'https://www.alphavantage.co';
+    private static final String BASE_URL = 'https:/www.alphavantage.co';
 
     /**
      * @description A low level function that sends a request to the Alpha

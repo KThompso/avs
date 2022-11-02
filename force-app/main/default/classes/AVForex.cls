@@ -9,7 +9,7 @@
  * www.alphavantage.co/physical_currency_list/.
  *
  * @group           AlphaVantage
- * @group-content   ../../ApexDocContent/AlphaVantage.htm
+ * @group-content   ../../../../ApexDocContent/AlphaVantage.htm
  */
 public class AVForex {
 

@@ -5,7 +5,7 @@
  * www.alphavantage.co/documentation/.
  *
  * @group           AlphaVantage
- * @group-content   ../../ApexDocContent/AlphaVantage.htm
+ * @group-content   ../../../../ApexDocContent/AlphaVantage.htm
  */
 public class AVCrypto {
 
